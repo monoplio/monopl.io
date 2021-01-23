@@ -1,3 +1,3 @@
 class Property < ApplicationRecord
-  has_one :tile, as: :board_tile, dependent: :delete_all
+  has_one :tile, as: :board_tile, dependent: :destroy
 end
