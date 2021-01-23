@@ -6,4 +6,5 @@ require:
 AllCops:
     Exclude:
         - 'config/environments/development.rb'
+        - 'db/schema.rb'
     NewCops: enable
