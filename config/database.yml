@@ -10,13 +10,13 @@ development:
   <<: *default
   database: boardgameapi_development
   username: postgres
-  password: 1234
+  password: toor
 
 test:
   <<: *default
   database: boardgameapi_test
   username: postgres
-  password: 1234
+  password: toor
 
 production:
   <<: *default
