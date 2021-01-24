@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Bundle install ... gets all gems
 
-Things you may want to cover:
+* rails db:reset ... reset db
 
-* Ruby version
+* rails db:setup ... reset + seed
 
-* System dependencies
+* rails db:seed ... runs seeds.rb
 
-* Configuration
+* rails db:migrate ... migrates 
 
-* Database creation
+* rubocop ... lints
 
-* Database initialization
+* rubocop -A ... corrects linting issues
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* rspec ... runs tests
