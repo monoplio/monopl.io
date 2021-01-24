@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :player do
-    username { "MyString" }
+    username { 'MyString' }
     x { 1 }
     y { 1 }
     balance { 1 }

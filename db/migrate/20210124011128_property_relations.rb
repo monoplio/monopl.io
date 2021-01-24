@@ -1,3 +1,4 @@
+# Add property relations
 class PropertyRelations < ActiveRecord::Migration[6.1]
   def change
     add_reference :properties, :player, foreign_key: true

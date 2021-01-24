@@ -1,3 +1,4 @@
+# Add action references
 class AddActionReference < ActiveRecord::Migration[6.1]
   def change
     add_reference :utilities, :action, foreign_key: true
