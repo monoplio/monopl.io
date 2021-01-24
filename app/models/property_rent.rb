@@ -1,3 +1,3 @@
 class PropertyRent < ApplicationRecord
-  belong_to :property
+  belongs_to :property
 end

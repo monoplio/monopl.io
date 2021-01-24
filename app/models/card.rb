@@ -1,3 +1,3 @@
 class Card < ApplicationRecord
-  belong_to :action
+  belongs_to :action
 end
