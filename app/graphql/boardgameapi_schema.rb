@@ -1,3 +1,4 @@
+# GraphQl Schema
 class BoardgameapiSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)

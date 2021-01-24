@@ -7,4 +7,5 @@ AllCops:
     Exclude:
         - 'config/environments/development.rb'
         - 'db/schema.rb'
+        - 'app/controllers/graphql_controller.rb'
     NewCops: enable
