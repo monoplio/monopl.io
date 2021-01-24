@@ -8,5 +8,6 @@ module Types
     field :house_available, Integer, null: false
     field :hotel_available, Integer, null: false
     field :tiles, [Types::TileType], null: false
+    field :players, [Types::PlayerType], null: false
   end
 end
