@@ -7,6 +7,6 @@ module Types
     field :height, Integer, null: false
     field :house_available, Integer, null: false
     field :hotel_available, Integer, null: false
-    # field :boardgame_tiles, [Types::TileType], null: false
+    field :tiles, [Types::TileType], null: false
   end
 end
