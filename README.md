@@ -1,17 +1,25 @@
 # README
 
-* Bundle install ... gets all gems
+DN
 
-* rails db:reset ... reset db
+## Schema
 
-* rails db:setup ... reset + seed
+![ERD](https://i.imgur.com/RYW0k7F.png)
 
-* rails db:seed ... runs seeds.rb
+## Commands
 
-* rails db:migrate ... migrates 
+-   Bundle install ... gets all gems
 
-* rubocop ... lints
+-   rails db:reset ... reset db
 
-* rubocop -A ... corrects linting issues
+-   rails db:setup ... reset + seed
 
-* rspec ... runs tests
+-   rails db:seed ... runs seeds.rb
+
+-   rails db:migrate ... migrates
+
+-   rubocop ... lints
+
+-   rubocop -A ... corrects linting issues
+
+-   rspec ... runs tests
