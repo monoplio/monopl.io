@@ -10,41 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_123_195_039) do
+ActiveRecord::Schema.define(version: 2021_01_24_002815) do
+
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'action_tiles', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "action_tiles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'games', force: :cascade do |t|
-    t.integer 'width'
-    t.integer 'height'
-    t.integer 'house_max'
-    t.integer 'hotel_max'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "games", force: :cascade do |t|
+    t.integer "width"
+    t.integer "height"
+    t.integer "house_available"
+    t.integer "hotel_available"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'properties', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'price'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "properties", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'tiles', force: :cascade do |t|
-    t.integer 'x'
-    t.integer 'y'
-    t.string 'board_tile_type'
-    t.bigint 'board_tile_id'
-    t.bigint 'game_id'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.index %w[board_tile_type board_tile_id], name: 'index_tiles_on_board_tile'
-    t.index ['game_id'], name: 'index_tiles_on_game_id'
+  create_table "tiles", force: :cascade do |t|
+    t.integer "x"
+    t.integer "y"
+    t.string "board_tile_type"
+    t.bigint "board_tile_id"
+    t.bigint "game_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["board_tile_type", "board_tile_id"], name: "index_tiles_on_board_tile"
+    t.index ["game_id"], name: "index_tiles_on_game_id"
   end
+
 end
