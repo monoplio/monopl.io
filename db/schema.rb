@@ -10,12 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_002815) do
+ActiveRecord::Schema.define(version: 2021_01_24_012020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "action_tiles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "action_id"
+    t.index ["action_id"], name: "index_action_tiles_on_action_id"
+  end
+
+  create_table "actions", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "cards", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "action_id"
+    t.index ["action_id"], name: "index_cards_on_action_id"
+  end
+
+  create_table "decks", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -30,9 +53,40 @@ ActiveRecord::Schema.define(version: 2021_01_24_002815) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "players", force: :cascade do |t|
+    t.string "username"
+    t.integer "x"
+    t.integer "y"
+    t.integer "balance"
+    t.bigint "game_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["game_id"], name: "index_players_on_game_id"
+  end
+
   create_table "properties", force: :cascade do |t|
     t.string "name"
     t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "player_id"
+    t.bigint "property_set_id"
+    t.index ["player_id"], name: "index_properties_on_player_id"
+    t.index ["property_set_id"], name: "index_properties_on_property_set_id"
+  end
+
+  create_table "property_rents", force: :cascade do |t|
+    t.integer "stage"
+    t.integer "rent"
+    t.bigint "property_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["property_id"], name: "index_property_rents_on_property_id"
+  end
+
+  create_table "property_sets", force: :cascade do |t|
+    t.string "color"
+    t.integer "bonus"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,4 +103,18 @@ ActiveRecord::Schema.define(version: 2021_01_24_002815) do
     t.index ["game_id"], name: "index_tiles_on_game_id"
   end
 
+  create_table "utilities", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "action_id"
+    t.index ["action_id"], name: "index_utilities_on_action_id"
+  end
+
+  add_foreign_key "action_tiles", "actions"
+  add_foreign_key "cards", "actions"
+  add_foreign_key "properties", "players"
+  add_foreign_key "properties", "property_sets"
+  add_foreign_key "utilities", "actions"
 end
