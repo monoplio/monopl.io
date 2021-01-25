@@ -1,5 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Player, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:player) { build(:player) }
+
+  describe 'Player Attribute Validations' do
+    let(:result) { player.valid? }
+
+    it 'valid player' do
+      expect(result).to(be(true))
+    end
+  end
 end
