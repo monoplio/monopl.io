@@ -7,5 +7,6 @@ module Types
     field :x, Integer, null: false
     field :y, Integer, null: false
     field :balance, Integer, null: false
+    field :next_player, Types::PlayerType, null: true
   end
 end
