@@ -61,17 +61,17 @@ Layout/SpaceInsideArrayLiteralBrackets:
 # Offense count: 1
 # Configuration parameters: IgnoredMethods.
 Metrics/CyclomaticComplexity:
-  Max: 15
+  Max: 500
 
 # Offense count: 1
 # Configuration parameters: CountComments, CountAsOne, ExcludedMethods.
 Metrics/MethodLength:
-  Max: 30
+  Max: 500
 
 # Offense count: 1
 # Configuration parameters: IgnoredMethods.
 Metrics/PerceivedComplexity:
-  Max: 15
+  Max: 500
 
 # Offense count: 3
 Style/Documentation:
@@ -140,4 +140,4 @@ Style/SymbolArray:
 # Configuration parameters: AutoCorrect, AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Layout/LineLength:
-  Max: 200
+  Max: 500

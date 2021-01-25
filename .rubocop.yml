@@ -8,4 +8,5 @@ AllCops:
         - 'config/environments/development.rb'
         - 'db/schema.rb'
         - 'app/controllers/graphql_controller.rb'
+        - 'app/services/generate_classic_map.rb'
     NewCops: enable
