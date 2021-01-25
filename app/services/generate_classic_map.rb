@@ -1,3 +1,4 @@
+# Service Object for generation classic map
 class GenerateClassicMap
   def call
     game = Game.create!(

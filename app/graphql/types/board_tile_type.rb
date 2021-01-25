@@ -5,13 +5,14 @@ module Types
     possible_types Types::PropertyType, Types::ActionTileType, Types::UtilityType, Types::DeckType
 
     def self.resolve_type(object, _context)
-      if object.is_a?(Property)
+      case object
+      when Property
         Types::PropertyType
-      elsif object.is_a?(ActionTile)
+      when ActionTile
         Types::ActionTileType
-      elsif object.is_a?(Utility)
+      when Utility
         Types::UtilityType
-      elsif object.is_a?(Deck)
+      when Deck
         Types::DeckType
       end
     end
