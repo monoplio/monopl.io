@@ -6,13 +6,7 @@ module Mutations
 
       type Types::GameType
       def resolve(username:)
-        game = ::Game.create!(
-          width: 11,
-          height: 11,
-          house_available: 32,
-          hotel_available: 12,
-          state: 'pending'
-        )
+        game = GenerateClassicMap.new().call()
 
         player = ::Player.create!(
           username: username,

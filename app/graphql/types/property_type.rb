@@ -3,7 +3,7 @@ module Types
   class PropertyType < Types::BaseObject
     description 'A type that represents a single Game entity.'
     field :id, ID, null: false
-    field :name, Integer, null: false
+    field :name, String, null: false
     field :price, Integer, null: false
   end
 end
