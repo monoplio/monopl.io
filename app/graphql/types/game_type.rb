@@ -7,6 +7,7 @@ module Types
     field :height, Integer, null: false
     field :house_available, Integer, null: false
     field :hotel_available, Integer, null: false
+    field :state, String, null: false
     field :tiles, [Types::TileType], null: false
     field :players, [Types::PlayerType], null: false
     field :owner, Types::PlayerType, null: false

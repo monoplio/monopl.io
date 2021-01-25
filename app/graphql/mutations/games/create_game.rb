@@ -10,7 +10,8 @@ module Mutations
           width: 11,
           height: 11,
           house_available: 32,
-          hotel_available: 12
+          hotel_available: 12,
+          state: 'pending'
         )
 
         player = ::Player.create!(
