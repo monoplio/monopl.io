@@ -545,7 +545,4 @@ class GenerateClassicMap
 
     game
   end
-
-  private
-
 end

@@ -4,7 +4,6 @@ module Types
     description 'Various kinds of tiles'
     possible_types Types::PropertyType, Types::ActionTileType, Types::UtilityType, Types::DeckType
 
-
     def self.resolve_type(object, _context)
       if object.is_a?(Property)
         Types::PropertyType
