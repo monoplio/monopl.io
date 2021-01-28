@@ -33,7 +33,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Brown 1',
       price: 60,
-      property_set_id: brown_set.id
+      property_set_id: brown_set.id,
+      stage: 0,
+      state: "open",
+      mortgage: 30,
+      house_price: 50
     )
 
     Tile.create!(
@@ -57,7 +61,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Brown 2',
       price: 80,
-      property_set_id: brown_set.id
+      property_set_id: brown_set.id,
+      stage: 0,
+      state: "open",
+      mortgage: 30,
+      house_price: 50
     )
 
     Tile.create!(
@@ -87,7 +95,10 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Rail Road 1',
       price: 200,
-      property_set_id: rail_roads.id
+      property_set_id: rail_roads.id,
+      stage: 0,
+      state: "open",
+      mortgage: 100
     )
 
     Tile.create!(
@@ -105,7 +116,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Light Blue 1',
       price: 100,
-      property_set_id: light_blue.id
+      property_set_id: light_blue.id,
+      stage: 0,
+      state: "open",
+      mortgage: 50,
+      house_price: 50
     )
 
     Tile.create!(
@@ -129,7 +144,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Light Blue 2',
       price: 100,
-      property_set_id: light_blue.id
+      property_set_id: light_blue.id,
+      stage: 0,
+      state: "open",
+      mortgage: 50,
+      house_price: 50
     )
 
     Tile.create!(
@@ -142,7 +161,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Light Blue 3',
       price: 120,
-      property_set_id: light_blue.id
+      property_set_id: light_blue.id,
+      stage: 0,
+      state: "open",
+      mortgage: 60,
+      house_price: 50
     )
 
     Tile.create!(
@@ -172,7 +195,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Pink 1',
       price: 140,
-      property_set_id: pink.id
+      property_set_id: pink.id,
+      stage: 0,
+      state: "open",
+      mortgage: 70,
+      house_price: 100
     )
 
     Tile.create!(
@@ -198,7 +225,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Pink 2',
       price: 140,
-      property_set_id: pink.id
+      property_set_id: pink.id,
+      stage: 0,
+      state: "open",
+      mortgage: 70,
+      house_price: 100
     )
 
     Tile.create!(
@@ -211,7 +242,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Pink 3',
       price: 160,
-      property_set_id: pink.id
+      property_set_id: pink.id,
+      stage: 0,
+      state: "open",
+      mortgage: 80,
+      house_price: 100
     )
 
     Tile.create!(
@@ -224,7 +259,10 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Rail Road 2',
       price: 200,
-      property_set_id: rail_roads.id
+      property_set_id: rail_roads.id,
+      stage: 0,
+      state: "open",
+      mortgage: 100
     )
 
     Tile.create!(
@@ -242,7 +280,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Orange 1',
       price: 180,
-      property_set_id: orange.id
+      property_set_id: orange.id,
+      stage: 0,
+      state: "open",
+      mortgage: 90,
+      house_price: 100
     )
 
     Tile.create!(
@@ -262,7 +304,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Orange 2',
       price: 180,
-      property_set_id: orange.id
+      property_set_id: orange.id,
+      stage: 0,
+      state: "open",
+      mortgage: 90,
+      house_price: 100
     )
 
     Tile.create!(
@@ -275,7 +321,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Orange 3',
       price: 200,
-      property_set_id: orange.id
+      property_set_id: orange.id,
+      stage: 0,
+      state: "open",
+      mortgage: 100,
+      house_price: 100
     )
 
     Tile.create!(
@@ -305,7 +355,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Red 1',
       price: 220,
-      property_set_id: red.id
+      property_set_id: red.id,
+      stage: 0,
+      state: "open",
+      mortgage: 110,
+      house_price: 150
     )
 
     Tile.create!(
@@ -325,7 +379,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Red 2',
       price: 220,
-      property_set_id: red.id
+      property_set_id: red.id,
+      stage: 0,
+      state: "open",
+      mortgage: 110,
+      house_price:150
     )
 
     Tile.create!(
@@ -338,7 +396,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Red 3',
       price: 240,
-      property_set_id: red.id
+      property_set_id: red.id,
+      stage: 0,
+      state: "open",
+      mortgage: 120,
+      house_price: 150
     )
 
     Tile.create!(
@@ -351,7 +413,10 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Rail Road 3',
       price: 200,
-      property_set_id: rail_roads.id
+      property_set_id: rail_roads.id,
+      stage: 0,
+      state: "open",
+      mortgage: 100
     )
 
     Tile.create!(
@@ -369,7 +434,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Yellow 1',
       price: 260,
-      property_set_id: yellow.id
+      property_set_id: yellow.id,
+      stage: 0,
+      state: "open",
+      mortgage: 130,
+      house_price: 150
     )
 
     Tile.create!(
@@ -382,7 +451,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Yellow 2',
       price: 260,
-      property_set_id: yellow.id
+      property_set_id: yellow.id,
+      stage: 0,
+      state: "open",
+      mortgage: 130,
+      house_price: 150
     )
 
     Tile.create!(
@@ -408,7 +481,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Yellow 3',
       price: 280,
-      property_set_id: yellow.id
+      property_set_id: yellow.id,
+      stage: 0,
+      state: "open",
+      mortgage: 140,
+      house_price: 150
     )
 
     Tile.create!(
@@ -438,7 +515,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Green 1',
       price: 300,
-      property_set_id: green.id
+      property_set_id: green.id,
+      stage: 0,
+      state: "open",
+      mortgage: 150,
+      house_price: 200
     )
 
     Tile.create!(
@@ -451,7 +532,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Green 2',
       price: 300,
-      property_set_id: green.id
+      property_set_id: green.id,
+      stage: 0,
+      state: "open",
+      mortgage: 150,
+      house_price: 200
     )
 
     Tile.create!(
@@ -471,7 +556,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Green 3',
       price: 320,
-      property_set_id: green.id
+      property_set_id: green.id,
+      stage: 0,
+      state: "open",
+      mortgage: 160,
+      house_price: 200
     )
 
     Tile.create!(
@@ -484,7 +573,10 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Rail Road 4',
       price: 200,
-      property_set_id: rail_roads.id
+      property_set_id: rail_roads.id,
+      stage: 0,
+      state: "open",
+      mortgage: 100
     )
 
     Tile.create!(
@@ -509,7 +601,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Blue 1',
       price: 350,
-      property_set_id: blue.id
+      property_set_id: blue.id,
+      stage: 0,
+      state: "open",
+      mortgage: 175,
+      house_price: 200
     )
 
     Tile.create!(
@@ -534,7 +630,11 @@ class GenerateClassicMap
     property = Property.create!(
       name: 'Blue 2',
       price: 400,
-      property_set_id: blue.id
+      property_set_id: blue.id,
+      stage: 0,
+      state: "open",
+      mortgage: 200,
+      house_price: 200
     )
 
     Tile.create!(
