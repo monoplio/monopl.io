@@ -14,6 +14,7 @@ module Mutations
           x: 0,
           y: 0,
           balance: 1500,
+          is_playing: true,
           game_id: game.id
         )
       rescue ActiveRecord::RecordNotFound
