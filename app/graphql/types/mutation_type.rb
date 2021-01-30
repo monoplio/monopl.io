@@ -7,5 +7,6 @@ module Types
 
     # Turn Mutations
     field :ff, mutation: Mutations::Turns::Ff, description: 'Player forfeits game'
+    field :buy_house, mutation: Mutations::Turns::BuyHouse, description: 'Purchases house on property'
   end
 end
