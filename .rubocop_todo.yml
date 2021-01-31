@@ -73,6 +73,10 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Max: 500
 
+# Edit max method line count
+Metrics/AbcSize:
+  Max: 500
+
 # Offense count: 3
 Style/Documentation:
   Exclude:
