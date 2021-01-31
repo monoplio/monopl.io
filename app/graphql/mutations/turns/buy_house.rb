@@ -10,7 +10,7 @@ module Mutations
         player = Player.find(property.player_id)
         game = Game.find(player.game_id)
 
-        if game.house_available.positive? && player.balance > property.house_price && property.stage <= 5
+        if game.house_available.positive? && (player.balance > property.house_price) && (property.stage <= 5)
           property.update!(stage: property.stage + 1)
           game.update!(house_available: game.house_available - 1)
         end
