@@ -1,6 +1,6 @@
 module Mutations
   module Turns
-    # Mutation that adds house/hotel to a property
+    # Mutation that purchases a property
     class BuyProperty < BaseMutation
       argument :player_id, ID, required: true
       argument :property_id, ID, required: true
@@ -10,11 +10,15 @@ module Mutations
         player = Player.find(player_id)
         property = Property.find(property_id)
 
-        if player.balance > property.price && property.player_id.nil?
-          property.update!(player_id: player_id)
+        if !property.player_id.nil?
+          GraphQL::ExecutionError.new('ERROR: Property is already owned')
+        elsif player.balance < property.price
+          GraphQL::ExecutionError.new('ERROR: Player does not have enough money')
+        else
+          property.update!(player_id: player_id, state: 'owned')
           player.update!(balance: player.balance - property.price)
+          property
         end
-        property
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Player or property does not exist')
       end
