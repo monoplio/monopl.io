@@ -12,6 +12,7 @@ module Mutations
 
         if property.stage.positive?
           property.update!(stage: property.stage - 1)
+          player.update!(balance: player.balance + property.house_price / 2)
           game.update!(house_available: game.house_available + 1)
         end
         property
