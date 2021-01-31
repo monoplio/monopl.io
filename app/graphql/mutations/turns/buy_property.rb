@@ -16,7 +16,7 @@ module Mutations
         end
         property
       rescue ActiveRecord::RecordNotFound
-        GraphQL::ExecutionError.new('ERROR: Game or player or property does not exist')
+        GraphQL::ExecutionError.new('ERROR: Player or property does not exist')
       end
     end
   end
