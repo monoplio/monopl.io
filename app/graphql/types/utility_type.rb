@@ -6,5 +6,6 @@ module Types
     field :name, String, null: false
     field :description, String, null: false
     field :price, Integer, null: false
+    field :mortgage, Integer, null: false
   end
 end

@@ -212,7 +212,8 @@ class GenerateClassicMap
     property = Utility.create!(
       name: 'Electric Company',
       price: 150,
-      action_id: action.id
+      action_id: action.id,
+      mortgage: 75
     )
 
     Tile.create!(
@@ -468,7 +469,8 @@ class GenerateClassicMap
     property = Utility.create!(
       name: 'Water Works',
       price: 150,
-      action_id: action.id
+      action_id: action.id,
+      mortgage: 75
     )
 
     Tile.create!(
