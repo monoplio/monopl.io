@@ -9,13 +9,19 @@ module Mutations
         property = Property.find(property_id)
         player = Player.find(property.player_id)
         game = Game.find(player.game_id)
+        property_set = PropertySet.find(property.property_set_id)
+        stage = property.stage
 
-        if property.stage.positive?
+        if property_set.properties.where(stage: stage + 1).size.positive?
+          GraphQL::ExecutionError.new('ERROR: Cannot sell house/hotel; violates even build rule')
+        elsif property.stage.positive?
+          property.stage == 5 ? game.update!(hotel_available: game.hotel_available + 1) : game.update!(house_available: game.house_available + 1)
           property.update!(stage: property.stage - 1)
           player.update!(balance: player.balance + property.house_price / 2)
-          game.update!(house_available: game.house_available + 1)
+          property
+        else
+          GraphQL::ExecutionError.new('ERROR: The property does not have any houses or hotels')
         end
-        property
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game or player or property does not exist')
       end
