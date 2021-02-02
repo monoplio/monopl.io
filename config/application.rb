@@ -14,7 +14,8 @@ require 'action_mailbox/engine'
 require 'action_text/engine'
 require 'action_view/railtie'
 require 'action_cable/engine'
-# require "sprockets/railtie"
+require "sprockets/railtie"
+
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -26,6 +27,7 @@ module Boardgameapi
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.autoload_paths += %W[#{config.root}/app/services]
+    config.middleware.use Rack::MethodOverride
 
     # Configuration for the application, engines, and railties goes here.
     #

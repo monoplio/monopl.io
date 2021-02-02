@@ -23,3 +23,8 @@ DN
 -   rubocop -A ... corrects linting issues
 
 -   rspec ... runs tests
+
+
+## For Later
+
+bundle update sprockets
