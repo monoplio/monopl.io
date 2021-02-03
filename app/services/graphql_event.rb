@@ -3,7 +3,7 @@ class GraphqlEvent
   def initialize(message:, data:)
     @message = message
     @data = data
-    self.call
+    call
   end
 
   def call
