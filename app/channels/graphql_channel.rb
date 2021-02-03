@@ -9,6 +9,7 @@ class GraphqlChannel < ApplicationCable::Channel
     variables = ensure_hash(data['variables'])
     operation_name = data['operationName']
     context = {
+      current_game_id: variables['gameId'].to_i,
       channel: self
     }
 
