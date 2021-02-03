@@ -18,6 +18,7 @@ module Mutations
           property.stage == 5 ? game.update!(hotel_available: game.hotel_available + 1) : game.update!(house_available: game.house_available + 1)
           property.update!(stage: property.stage - 1)
           player.update!(balance: player.balance + property.house_price / 2)
+          GraphqlEvent.new(message: 'SellHouse', data: game)
           property
         else
           GraphQL::ExecutionError.new('ERROR: The property does not have any houses or hotels')

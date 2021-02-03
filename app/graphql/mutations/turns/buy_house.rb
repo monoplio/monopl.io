@@ -28,6 +28,7 @@ module Mutations
           property.update!(stage: property.stage + 1)
           player.update!(balance: player.balance - property.house_price)
           property.stage == 4 ? game.update!(hotel_available: game.hotel_available - 1) : game.update!(house_available: game.house_available - 1)
+          GraphqlEvent.new(message: 'BuyHouse', data: game)
           property
         end
       rescue ActiveRecord::RecordNotFound

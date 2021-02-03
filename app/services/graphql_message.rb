@@ -1,15 +1,15 @@
 # Service Object for generating Graphql Subscription messages
 class GraphqlMessage
-  def initialize(message:, object:)
+  def initialize(message:, data:)
     @message = message
-    @object = object
+    @data = data
   end
 
   def call
-    OpenStruct.new(message: message, data: object)
+    OpenStruct.new(message: message, data: data)
   end
 
   private
 
-  attr_reader :message, :object
+  attr_reader :message, :data
 end

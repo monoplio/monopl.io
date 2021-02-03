@@ -8,6 +8,7 @@ module Mutations
       def resolve(game_id:)
         game = Game.find(game_id)
         game.update!(state: 'start')
+        GraphqlEvent.new(message: 'StartGame', data: game)
         game
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game does not exist')

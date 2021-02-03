@@ -18,6 +18,7 @@ module Mutations
         else
           property.update!(state: 'owned')
           player(balance: player.balance - property.mortgage * 1.1)
+          GraphqlEvent.new(message: 'UnmortgageProperty', data: player.game)
           property
         end
       rescue ActiveRecord::RecordNotFound
