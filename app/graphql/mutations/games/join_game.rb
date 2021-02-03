@@ -9,7 +9,7 @@ module Mutations
       def resolve(username:, game_id:)
         game = Game.find(game_id)
 
-        ::Player.create!(
+        player = ::Player.create!(
           username: username,
           x: 0,
           y: 0,
@@ -17,6 +17,10 @@ module Mutations
           is_playing: true,
           game_id: game.id
         )
+
+        GraphqlEvent.new(message: 'JoinGame', data: game)
+
+        player
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game does not exist')
       end
