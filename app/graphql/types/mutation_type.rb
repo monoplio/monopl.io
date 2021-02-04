@@ -12,5 +12,6 @@ module Types
     field :mortgage_property, mutation: Mutations::Turns::MortgageProperty, description: 'Mortgages a property'
     field :sell_house, mutation: Mutations::Turns::SellHouse, description: 'Sells house on property'
     field :unmortgage_property, mutation: Mutations::Turns::UnmortgageProperty, description: 'Unmortgages a property'
+    field :end_turn, mutation: Mutations::Turns::EndTurn, description: 'Ends player turn'
   end
 end

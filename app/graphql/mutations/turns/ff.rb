@@ -18,7 +18,7 @@ module Mutations
         GraphqlEvent.new(message: 'Ff', data: player.game)
         player
       rescue ActiveRecord::RecordNotFound
-        GraphQL::ExecutionError.new('ERROR: Game or player does not exist')
+        GraphQL::ExecutionError.new('ERROR: Player does not exist')
       end
     end
   end
