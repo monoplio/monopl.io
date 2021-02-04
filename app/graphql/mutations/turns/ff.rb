@@ -15,6 +15,7 @@ module Mutations
           next_player = player.next_player_id
           Player.find_by(next_player_id: player_id).update!(next_player_id: next_player)
         end
+        GraphqlEvent.new(message: 'Ff', data: player.game)
         player
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game or player does not exist')
