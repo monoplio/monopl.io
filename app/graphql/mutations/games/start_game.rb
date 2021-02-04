@@ -12,8 +12,11 @@ module Mutations
         elsif !game.state.eql? 'pending'
           GraphQL::ExecutionError.new('ERROR: Game cannot be started')
         else
-          game = Game.find(game_id)
           game.update!(state: 'start')
+          (0..(game.players.length - 2)).each do |i|
+            game.players[i].update!(next_player_id: game.players[i + 1].id)
+          end
+          game.players[game.players.length - 1].update!(next_player_id: game.players[0].id)
           GraphqlEvent.new(message: 'StartGame', data: game)
           game
         end
