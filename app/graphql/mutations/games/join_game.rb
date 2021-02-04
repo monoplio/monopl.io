@@ -9,7 +9,7 @@ module Mutations
       def resolve(username:, game_id:)
         game = Game.find(game_id)
 
-        if game.state === "pending"
+        if game.state.eql? 'pending'
           player = ::Player.create!(
             username: username,
             x: 0,

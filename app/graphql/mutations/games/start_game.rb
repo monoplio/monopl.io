@@ -7,9 +7,14 @@ module Mutations
       type Types::GameType
       def resolve(game_id:)
         game = Game.find(game_id)
-        game.update!(state: 'start')
-        GraphqlEvent.new(message: 'StartGame', data: game)
-        game
+        if game.players.length <= 1
+          GraphQL::ExecutionError.new('ERROR: Add more players before starting game')
+        else
+          game = Game.find(game_id)
+          game.update!(state: 'start')
+          GraphqlEvent.new(message: 'StartGame', data: game)
+          game
+        end
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game does not exist')
       end
