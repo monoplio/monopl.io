@@ -6,9 +6,9 @@ module Mutations
 
       type Types::PropertyType
       def resolve(property_id:)
-        property = Property.find(property_id)
-        player = Player.find(property.player_id)
-        game = Game.find(player.game_id)
+        property = ::Property.find(property_id)
+        player = ::Player.find(property.player_id)
+        game = ::Game.find(player.game_id)
         property_set = PropertySet.find(property.property_set_id)
         stage = property.stage
 

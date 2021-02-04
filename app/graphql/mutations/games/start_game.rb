@@ -6,7 +6,7 @@ module Mutations
 
       type Types::GameType
       def resolve(game_id:)
-        game = Game.find(game_id)
+        game = ::Game.find(game_id)
         if game.players.length <= 1
           GraphQL::ExecutionError.new('ERROR: Add more players before starting game')
         elsif !game.state.eql? 'pending'

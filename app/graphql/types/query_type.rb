@@ -5,5 +5,6 @@ module Types
     include GraphQL::Types::Relay::HasNodesField
 
     field :games, resolver: Queries::Games
+    field :game, resolver: Queries::Game
   end
 end
