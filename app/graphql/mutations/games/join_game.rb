@@ -9,18 +9,20 @@ module Mutations
       def resolve(username:, game_id:)
         game = Game.find(game_id)
 
-        player = ::Player.create!(
-          username: username,
-          x: 0,
-          y: 0,
-          balance: 1500,
-          is_playing: true,
-          game_id: game.id
-        )
-
-        GraphqlEvent.new(message: 'JoinGame', data: game)
-
-        player
+        if game.state.eql? 'pending'
+          player = ::Player.create!(
+            username: username,
+            x: 0,
+            y: 0,
+            balance: 1500,
+            is_playing: true,
+            game_id: game.id
+          )
+          GraphqlEvent.new(message: 'JoinGame', data: game)
+          player
+        else
+          GraphQL::ExecutionError.new('ERROR: Unable to join game')
+        end
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Game does not exist')
       end

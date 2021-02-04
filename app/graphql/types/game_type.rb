@@ -11,5 +11,6 @@ module Types
     field :tiles, [Types::TileType], null: false
     field :players, [Types::PlayerType], null: false
     field :owner, Types::PlayerType, null: false
+    field :current_player, Types::PlayerType, null: true
   end
 end
