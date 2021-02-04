@@ -9,6 +9,8 @@ module Mutations
         game = Game.find(game_id)
         if game.players.length <= 1
           GraphQL::ExecutionError.new('ERROR: Add more players before starting game')
+        elsif !game.state.eql? 'pending'
+          GraphQL::ExecutionError.new('ERROR: Game cannot be started')
         else
           game = Game.find(game_id)
           game.update!(state: 'start')
