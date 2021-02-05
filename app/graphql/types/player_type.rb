@@ -7,8 +7,10 @@ module Types
     field :x, Integer, null: false
     field :y, Integer, null: false
     field :balance, Integer, null: false
+    field :can_roll, Boolean, null: false
     field :is_playing, Boolean, null: false
     field :last_roll, Integer, null: true
+    field :in_jail, Boolean, null: false
     field :next_player, Types::PlayerType, null: true
     field :game, Types::GameType, null: true
   end

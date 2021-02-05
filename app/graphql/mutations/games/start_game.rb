@@ -18,6 +18,7 @@ module Mutations
           end
           game.players[game.players.length - 1].update!(next_player_id: game.players[0].id)
           game.update!(current_player_id: game.players[0].id)
+          game.players[0].update!(can_roll: true)
           GraphqlEvent.new(message: 'StartGame', data: game)
           game
         end

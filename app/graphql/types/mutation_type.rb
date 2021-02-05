@@ -10,6 +10,7 @@ module Types
     field :buy_property, mutation: Mutations::Turns::BuyProperty, description: 'Purchases property'
     field :ff, mutation: Mutations::Turns::Ff, description: 'Player forfeits game'
     field :mortgage_property, mutation: Mutations::Turns::MortgageProperty, description: 'Mortgages a property'
+    field :roll_dice, mutation: Mutations::Turns::RollDice, description: 'Rolls the dice'
     field :sell_house, mutation: Mutations::Turns::SellHouse, description: 'Sells house on property'
     field :unmortgage_property, mutation: Mutations::Turns::UnmortgageProperty, description: 'Unmortgages a property'
     field :end_turn, mutation: Mutations::Turns::EndTurn, description: 'Ends player turn'

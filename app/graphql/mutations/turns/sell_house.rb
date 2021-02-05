@@ -2,12 +2,13 @@ module Mutations
   module Turns
     # Mutation that removes house/hotel from a property
     class SellHouse < BaseMutation
+      argument :player_id, ID, required: true
       argument :property_id, ID, required: true
 
       type Types::PropertyType
-      def resolve(property_id:)
+      def resolve(player_id:, property_id:)
         property = Property.find(property_id)
-        player = Player.find(property.player_id)
+        player = Player.find(player_id)
         game = Game.find(player.game_id)
         property_set = PropertySet.find(property.property_set_id)
         stage = property.stage
