@@ -10,5 +10,6 @@ module Types
     field :is_playing, Boolean, null: false
     field :last_roll, Integer, null: true
     field :next_player, Types::PlayerType, null: true
+    field :game, Types::GameType, null: true
   end
 end
