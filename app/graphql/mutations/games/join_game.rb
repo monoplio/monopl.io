@@ -15,7 +15,9 @@ module Mutations
             x: 0,
             y: 0,
             balance: 1500,
+            can_roll: false,
             is_playing: true,
+            in_jail: false,
             game_id: game.id
           )
           GraphqlEvent.new(message: 'JoinGame', data: game)
