@@ -10,5 +10,6 @@ module Types
     field :state, String, null: false
     field :mortgage, Integer, null: false
     field :house_price, Integer, null: true
+    field :property_set, Types::PropertySetType, null: true
   end
 end
