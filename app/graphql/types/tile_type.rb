@@ -7,5 +7,6 @@ module Types
     field :y, Integer, null: false
     field :board_tile_type, String, null: false
     field :board_tile, Types::BoardTileType, null: false
+    field :current_players, [Types::PlayerType], null: false
   end
 end
