@@ -18,10 +18,8 @@ module Mutations
         elsif !player.can_roll
           GraphQL::ExecutionError.new('ERROR: Player cannot roll')
         else
-          roll1 = rand(1..6)
-          roll2 = rand(1..6)
-          player.update!(last_roll: roll1 + roll2)
-          if roll1 == roll2
+          player.update!(last_roll1: rand(1..6), last_roll2: rand(1..6))
+          if player.last_roll1 == player.last_roll2
             if player.in_jail
               player.update!(in_jail: false)
               GraphqlEvent.new(message: 'RollDice', data: player.game)
@@ -34,7 +32,9 @@ module Mutations
           else
             player.update!(roll_count: 0, can_roll: false)
           end
-          player.update!(x: ((player.x + roll1 + roll2) % game.width)) unless player.in_jail
+          x = player.x + player.last_roll1 + player.last_roll2
+          player.update!(balance: player.balance + 200) unless x < 40
+          player.update!(x: x % game.width) unless player.in_jail
           GraphqlEvent.new(message: 'RollDice', data: player.game)
           player
         end

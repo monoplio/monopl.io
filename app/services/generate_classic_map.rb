@@ -31,7 +31,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Brown 1',
+      name: 'Mediterranean Avenue',
       price: 60,
       property_set_id: brown_set.id,
       stage: 0,
@@ -59,7 +59,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Brown 2',
+      name: 'Baltic Avenue',
       price: 80,
       property_set_id: brown_set.id,
       stage: 0,
@@ -93,7 +93,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Rail Road 1',
+      name: 'Reading Railroad',
       price: 200,
       property_set_id: rail_roads.id,
       stage: 0,
@@ -114,7 +114,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Light Blue 1',
+      name: 'Oriental Avenue',
       price: 100,
       property_set_id: light_blue.id,
       stage: 0,
@@ -142,7 +142,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Light Blue 2',
+      name: 'Vermont Avenue',
       price: 100,
       property_set_id: light_blue.id,
       stage: 0,
@@ -159,7 +159,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Light Blue 3',
+      name: 'Connecticut',
       price: 120,
       property_set_id: light_blue.id,
       stage: 0,
@@ -193,7 +193,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Pink 1',
+      name: 'St. Charles Place',
       price: 140,
       property_set_id: pink.id,
       stage: 0,
@@ -224,7 +224,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Pink 2',
+      name: 'States Avenue',
       price: 140,
       property_set_id: pink.id,
       stage: 0,
@@ -241,7 +241,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Pink 3',
+      name: 'Virginia Avenue',
       price: 160,
       property_set_id: pink.id,
       stage: 0,
@@ -258,7 +258,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Rail Road 2',
+      name: 'Pennsylvania Railroad',
       price: 200,
       property_set_id: rail_roads.id,
       stage: 0,
@@ -279,7 +279,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Orange 1',
+      name: 'St. James Place',
       price: 180,
       property_set_id: orange.id,
       stage: 0,
@@ -303,7 +303,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Orange 2',
+      name: 'Tennessee Avenue',
       price: 180,
       property_set_id: orange.id,
       stage: 0,
@@ -320,7 +320,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Orange 3',
+      name: 'New York Avenue',
       price: 200,
       property_set_id: orange.id,
       stage: 0,
@@ -354,7 +354,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Red 1',
+      name: 'Kentucky Avenue',
       price: 220,
       property_set_id: red.id,
       stage: 0,
@@ -378,7 +378,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Red 2',
+      name: 'Indiana Avenue',
       price: 220,
       property_set_id: red.id,
       stage: 0,
@@ -395,7 +395,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Red 3',
+      name: 'Illinois Avenue',
       price: 240,
       property_set_id: red.id,
       stage: 0,
@@ -412,7 +412,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Rail Road 3',
+      name: 'B. & O. Railroad',
       price: 200,
       property_set_id: rail_roads.id,
       stage: 0,
@@ -433,7 +433,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Yellow 1',
+      name: 'Atlantic Avenue',
       price: 260,
       property_set_id: yellow.id,
       stage: 0,
@@ -450,7 +450,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Yellow 2',
+      name: 'Ventnor Avenue',
       price: 260,
       property_set_id: yellow.id,
       stage: 0,
@@ -481,7 +481,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Yellow 3',
+      name: 'Marvin Gardens',
       price: 280,
       property_set_id: yellow.id,
       stage: 0,
@@ -515,7 +515,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Green 1',
+      name: 'Pacific Avenue',
       price: 300,
       property_set_id: green.id,
       stage: 0,
@@ -532,7 +532,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Green 2',
+      name: 'North Carolina Avenue',
       price: 300,
       property_set_id: green.id,
       stage: 0,
@@ -556,7 +556,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Green 3',
+      name: 'Pennsylvania Avenue',
       price: 320,
       property_set_id: green.id,
       stage: 0,
@@ -573,7 +573,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Rail Road 4',
+      name: 'Short Line',
       price: 200,
       property_set_id: rail_roads.id,
       stage: 0,
@@ -601,7 +601,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Blue 1',
+      name: 'Park Place',
       price: 350,
       property_set_id: blue.id,
       stage: 0,
@@ -630,7 +630,7 @@ class GenerateClassicMap
     )
 
     property = Property.create!(
-      name: 'Blue 2',
+      name: 'Boardwalk',
       price: 400,
       property_set_id: blue.id,
       stage: 0,
