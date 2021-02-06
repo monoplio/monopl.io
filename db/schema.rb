@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_05_131545) do
+ActiveRecord::Schema.define(version: 2021_02_06_123952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,8 +70,9 @@ ActiveRecord::Schema.define(version: 2021_02_05_131545) do
     t.integer "roll_count"
     t.bigint "next_player_id"
     t.boolean "is_playing"
-    t.integer "last_roll"
     t.boolean "in_jail"
+    t.integer "last_roll1"
+    t.integer "last_roll2"
     t.index ["game_id"], name: "index_players_on_game_id"
     t.index ["next_player_id"], name: "index_players_on_next_player_id"
   end
