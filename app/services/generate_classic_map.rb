@@ -2,8 +2,8 @@
 class GenerateClassicMap
   def call
     game = Game.create!(
-      width: 11,
-      height: 11,
+      width: 40,
+      height: 0,
       house_available: 32,
       hotel_available: 12,
       state: 'pending'
