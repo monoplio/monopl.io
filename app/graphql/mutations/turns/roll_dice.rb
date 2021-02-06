@@ -26,6 +26,8 @@ module Mutations
               player # Return player without changing player x if player was in jail
             elsif player.roll_count == 2
               player.update!(x: 10, in_jail: true)
+            elsif player.roll_count.nil?
+              player.update!(roll_count: 1)
             else
               player.update!(roll_count: player.roll_count + 1)
             end
