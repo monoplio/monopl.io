@@ -3,6 +3,6 @@ class Tile < ApplicationRecord
   belongs_to :game
 
   def current_players
-    Player.where(x: self.x, game_id: self.game_id)
+    Player.where(x: x, game_id: game_id)
   end
 end
