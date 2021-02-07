@@ -16,6 +16,7 @@ module Mutations
           can_roll: false,
           is_playing: true,
           in_jail: false,
+          color: "rgb(#{rand(0..255)},#{rand(0..255)},#{rand(0..255)})",
           game_id: game.id
         )
 
