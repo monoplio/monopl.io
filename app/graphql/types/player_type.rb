@@ -12,6 +12,7 @@ module Types
     field :last_roll1, Integer, null: true
     field :last_roll2, Integer, null: true
     field :in_jail, Boolean, null: false
+    field :color, String, null: false
     field :next_player, Types::PlayerType, null: true
     field :game, Types::GameType, null: true
   end
