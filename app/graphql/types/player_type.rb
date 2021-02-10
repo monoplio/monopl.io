@@ -15,5 +15,6 @@ module Types
     field :color, String, null: false
     field :next_player, Types::PlayerType, null: true
     field :game, Types::GameType, null: true
+    field :tile, Types::TileType, null: true
   end
 end
