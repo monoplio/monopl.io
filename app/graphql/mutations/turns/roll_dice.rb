@@ -37,6 +37,17 @@ module Mutations
           x = player.x + player.last_roll1 + player.last_roll2
           player.update!(balance: player.balance + 200) unless x < 40
           player.update!(x: x % game.width) unless player.in_jail
+
+          if player.tile.board_tile.instance_of? ::Property
+            owner = player.tile.board_tile.player
+            if !owner.nil? && (owner.id != player.id)
+              ActiveRecord::Base.transaction do
+                player.update!(balance: player.balance - player.tile.board_tile.landing_cost)
+                owner.update!(balance: owner.balance + player.tile.board_tile.landing_cost)
+              end
+            end
+          end
+
           GraphqlEvent.new(message: 'RollDice', data: player.game)
           player
         end
