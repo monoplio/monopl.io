@@ -10,7 +10,7 @@ class GenerateClassicMap
     )
 
     action = Action.create!(
-      name: 'TBD'
+      action_type: 'TBD'
     )
 
     go_tile = ActionTile.create!(
