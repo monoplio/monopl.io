@@ -40,6 +40,42 @@ class GenerateClassicMap
       house_price: 50
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 2,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 10,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 30,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 160,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 250,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 1,
       y: 0,
@@ -66,6 +102,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 30,
       house_price: 50
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 4,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 20,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 60,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 180,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 320,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 450,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -123,6 +195,42 @@ class GenerateClassicMap
       house_price: 50
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 6,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 30,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 270,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 400,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 550,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 6,
       y: 0,
@@ -151,6 +259,42 @@ class GenerateClassicMap
       house_price: 50
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 6,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 30,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 270,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 400,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 550,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 8,
       y: 0,
@@ -166,6 +310,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 60,
       house_price: 50
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 6,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 40,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 300,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 450,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 600,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -202,6 +382,42 @@ class GenerateClassicMap
       house_price: 100
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 10,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 50,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 150,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 450,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 625,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 750,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 11,
       y: 0,
@@ -233,6 +449,42 @@ class GenerateClassicMap
       house_price: 100
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 10,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 50,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 150,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 450,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 625,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 750,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 13,
       y: 0,
@@ -248,6 +500,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 80,
       house_price: 100
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 12,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 60,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 180,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 500,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 700,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 900,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -288,6 +576,42 @@ class GenerateClassicMap
       house_price: 100
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 14,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 70,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 200,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 550,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 700,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 900,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 16,
       y: 0,
@@ -312,6 +636,42 @@ class GenerateClassicMap
       house_price: 100
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 14,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 70,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 200,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 550,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 700,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 900,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 18,
       y: 0,
@@ -327,6 +687,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 100,
       house_price: 100
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 16,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 220,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 600,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 800,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1000,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -363,6 +759,42 @@ class GenerateClassicMap
       house_price: 150
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 18,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 250,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 700,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 875,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1050,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 21,
       y: 0,
@@ -387,6 +819,42 @@ class GenerateClassicMap
       house_price:150
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 18,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 90,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 250,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 700,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 875,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1050,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 23,
       y: 0,
@@ -402,6 +870,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 120,
       house_price: 150
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 20,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 300,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 750,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 925,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1100,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -442,6 +946,42 @@ class GenerateClassicMap
       house_price: 150
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 22,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 110,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 330,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 800,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 975,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1150,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 26,
       y: 0,
@@ -457,6 +997,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 130,
       house_price: 150
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 22,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 110,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 330,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 800,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 975,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1150,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -488,6 +1064,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 140,
       house_price: 150
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 24,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 360,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 850,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 1025,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1200,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1150,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -524,6 +1136,42 @@ class GenerateClassicMap
       house_price: 200
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 26,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 130,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 390,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 900,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1275,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 31,
       y: 0,
@@ -539,6 +1187,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 150,
       house_price: 200
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 26,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 130,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 390,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 900,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1275,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -563,6 +1247,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 160,
       house_price: 200
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 28,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 150,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 450,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 1000,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1200,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1400,
+      property_id: property.id
     )
 
     Tile.create!(
@@ -610,6 +1330,42 @@ class GenerateClassicMap
       house_price: 200
     )
 
+    PropertyRent.create!(
+      stage: 0,
+      rent: 35,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 175,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 500,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 1100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1300,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1500,
+      property_id: property.id
+    )
+
     Tile.create!(
       x: 37,
       y: 0,
@@ -637,6 +1393,42 @@ class GenerateClassicMap
       state: "open",
       mortgage: 200,
       house_price: 200
+    )
+
+    PropertyRent.create!(
+      stage: 0,
+      rent: 35,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 1,
+      rent: 175,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 2,
+      rent: 500,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 3,
+      rent: 1100,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 4,
+      rent: 1300,
+      property_id: property.id
+    )
+
+    PropertyRent.create!(
+      stage: 5,
+      rent: 1500,
+      property_id: property.id
     )
 
     Tile.create!(
