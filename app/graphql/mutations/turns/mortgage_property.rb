@@ -16,7 +16,7 @@ module Mutations
           GraphQL::ExecutionError.new('ERROR: There are still houses/hotels on the property')
         else
           property.update!(state: 'mortgaged')
-          Player.find(property.player_id).update!(balance: player.balance + property.mortgage)
+          property.player.update!(balance: property.player.balance + property.mortgage)
           GraphqlEvent.new(message: 'MortgageProperty', data: property.player.game)
           property
         end

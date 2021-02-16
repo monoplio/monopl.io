@@ -11,13 +11,13 @@ module Mutations
 
         if property.player_id.nil?
           GraphQL::ExecutionError.new('ERROR: Property is not owned')
-        elsif player.balance >= property.mortgage * 1.1
+        elsif player.balance < property.mortgage * 1.1
           GraphQL::ExecutionError.new('ERROR: Player does not have enough money')
         elsif property.state != 'mortgaged'
           GraphQL::ExecutionError.new('ERROR: Property is not mortgaged')
         else
           property.update!(state: 'owned')
-          player(balance: player.balance - property.mortgage * 1.1)
+          player.update!(balance: player.balance - property.mortgage * 1.1)
           GraphqlEvent.new(message: 'UnmortgageProperty', data: player.game)
           property
         end
