@@ -11,5 +11,6 @@ module Types
     field :mortgage, Integer, null: false
     field :house_price, Integer, null: true
     field :property_set, Types::PropertySetType, null: true
+    field :property_rents, [Types::PropertyRentType], null: true
   end
 end

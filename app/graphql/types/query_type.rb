@@ -6,5 +6,6 @@ module Types
 
     field :games, resolver: Queries::Games
     field :game, resolver: Queries::Game
+    field :tile, resolver: Queries::Tile
   end
 end
