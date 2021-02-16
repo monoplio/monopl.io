@@ -3,14 +3,19 @@ class Property < ApplicationRecord
   belongs_to :player, optional: true
   belongs_to :property_set
   has_one :tile, as: :board_tile, dependent: :destroy
+  has_many :property_rents, dependent: :destroy
 
   def landing_cost
-    # This logic needs to be updated once we have rent stages
-    # property_rents.find_by(stage: stage, property_id: id)
-    if stage.zero?
-      price
-    elsif stage >= 1
-      price * 2
+    # Needs logic for rail roads which work differently due to the stage being dependant on ownership
+    if property_rents.empty?
+      0
+    else
+      rent = property_rents.find_by(stage: stage).rent
+      if stage.zero? # and If you own the full set (this needs to be added)
+        rent * 2
+      else
+        rent
+      end
     end
   end
 end

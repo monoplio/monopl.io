@@ -3,7 +3,7 @@ module Types
   class PropertyRentType < Types::BaseObject
     description 'A type that represents a single Game entity.'
     field :id, ID, null: false
-    field :stage, String, null: false
+    field :stage, Integer, null: false
     field :rent, String, null: false
   end
 end
