@@ -47,13 +47,16 @@ module Mutations
               end
             end
           elsif player.tile.board_tile.instance_of? ::ActionTile
+            # rubocop:disable Metrics/BlockNesting
             unless player.tile.board_tile.action.nil?
-              if player.tile.board_tile.action.action_type == "LoseMoney"
+              case player.tile.board_tile.action.action_type
+              when 'LoseMoney'
                 player.update!(balance: player.balance - player.tile.board_tile.action.data_field)
-              elsif player.tile.board_tile.action.action_type == "GoToJail" 
+              when 'GoToJail'
                 player.update!(x: 10, in_jail: true)
               end
             end
+            # rubocop:enable Metrics/BlockNesting
           end
 
           GraphqlEvent.new(message: 'RollDice', data: player.game)
