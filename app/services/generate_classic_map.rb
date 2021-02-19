@@ -1079,31 +1079,31 @@ class GenerateClassicMap
 
     PropertyRent.create!(
       stage: 1,
-      rent: 360,
+      rent: 120,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 2,
-      rent: 850,
+      rent: 360,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 3,
-      rent: 1025,
+      rent: 850,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 4,
-      rent: 1200,
+      rent: 1025,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 5,
-      rent: 1150,
+      rent: 1200,
       property_id: property.id
     )
 
@@ -1411,37 +1411,37 @@ class GenerateClassicMap
 
     PropertyRent.create!(
       stage: 0,
-      rent: 35,
+      rent: 50,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 1,
-      rent: 175,
+      rent: 200,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 2,
-      rent: 500,
+      rent: 600,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 3,
-      rent: 1100,
+      rent: 1400,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 4,
-      rent: 1300,
+      rent: 1700,
       property_id: property.id
     )
 
     PropertyRent.create!(
       stage: 5,
-      rent: 1500,
+      rent: 2000,
       property_id: property.id
     )
 
