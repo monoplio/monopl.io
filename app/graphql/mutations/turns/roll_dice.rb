@@ -46,6 +46,14 @@ module Mutations
                 owner.update!(balance: owner.balance + player.tile.board_tile.landing_cost)
               end
             end
+          elsif player.tile.board_tile.instance_of? ::ActionTile
+            unless player.tile.board_tile.action.nil?
+              if player.tile.board_tile.action.action_type == "LoseMoney"
+                player.update!(balance: player.balance - player.tile.board_tile.action.data_field)
+              elsif player.tile.board_tile.action.action_type == "GoToJail" 
+                player.update!(x: 10, in_jail: true)
+              end
+            end
           end
 
           GraphqlEvent.new(message: 'RollDice', data: player.game)

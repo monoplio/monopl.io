@@ -8,7 +8,7 @@ module Queries
     def resolve(id:)
       ::Game.find(id)
     rescue ActiveRecord::RecordNotFound
-      GraphQL::ExecutionError.new('ERROR: Image of given ID is nil')
+      GraphQL::ExecutionError.new('ERROR: Game of given ID is nil')
     end
   end
 end

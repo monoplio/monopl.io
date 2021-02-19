@@ -147,9 +147,14 @@ class GenerateClassicMap
       board_tile: property
     )
 
+    income_tax_action = Action.create!(
+      action_type: 'LoseMoney',
+      data_field: 200
+    )
+
     income_tax = ActionTile.create!(
       name: 'Income Tax',
-      action_id: action.id
+      action_id: income_tax_action.id
     )
 
     Tile.create!(
@@ -1109,9 +1114,13 @@ class GenerateClassicMap
       board_tile: property
     )
 
+    go_to_jail_action = Action.create!(
+      action_type: 'GoToJail'
+    )
+
     go_to_jail = ActionTile.create!(
       name: 'Go To Jail',
-      action_id: action.id
+      action_id: go_to_jail_action.id
     )
 
     Tile.create!(
@@ -1373,9 +1382,14 @@ class GenerateClassicMap
       board_tile: property
     )
 
+   luxury_tax_action = Action.create!(
+      action_type: "LoseMoney",
+      data_field: 75
+    )
+
     luxury_tax = ActionTile.create!(
       name: 'Luxury Tax',
-      action_id: action.id
+      action_id: luxury_tax_action.id
     )
 
     Tile.create!(
