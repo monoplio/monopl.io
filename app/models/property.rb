@@ -18,4 +18,14 @@ class Property < ApplicationRecord
       end
     end
   end
+
+  def can_buy_house
+    (property_set.properties.where(stage: stage - 1).size >= 0 && property_set.can_build)
+  end
+
+  def can_sell_house
+    (property_set.properties.where(stage: stage + 1).size >= 0 && property_set.can_build)
+  end
+
+  # delegate :can_build, to: :property_set
 end
