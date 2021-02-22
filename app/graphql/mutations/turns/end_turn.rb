@@ -15,6 +15,8 @@ module Mutations
           GraphQL::ExecutionError.new('ERROR: Cannot end turn on other player\'s turn')
         elsif !(game.state.eql? 'start')
           GraphQL::ExecutionError.new('ERROR: Can only end turn for in progress game')
+        elsif !game.current_trade.nil?
+          GraphQL::ExecutionError.new('ERROR: Cannot end turn while trade is active')
         elsif player.can_roll
           GraphQL::ExecutionError.new('ERROR: Cannot end turn when player can still roll')
         else

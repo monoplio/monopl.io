@@ -12,5 +12,6 @@ module Types
     field :players, [Types::PlayerType], null: false
     field :owner, Types::PlayerType, null: false
     field :current_player, Types::PlayerType, null: true
+    field :current_trade, Types::TradeType, null: true
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_15_012346) do
+ActiveRecord::Schema.define(version: 2021_02_20_213456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +55,9 @@ ActiveRecord::Schema.define(version: 2021_02_15_012346) do
     t.bigint "owner_id"
     t.string "state"
     t.bigint "current_player_id"
+    t.bigint "current_trade_id"
     t.index ["current_player_id"], name: "index_games_on_current_player_id"
+    t.index ["current_trade_id"], name: "index_games_on_current_trade_id"
     t.index ["owner_id"], name: "index_games_on_owner_id"
   end
 
@@ -122,6 +124,27 @@ ActiveRecord::Schema.define(version: 2021_02_15_012346) do
     t.index ["game_id"], name: "index_tiles_on_game_id"
   end
 
+  create_table "trade_items", force: :cascade do |t|
+    t.string "item_type"
+    t.bigint "item_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "trade_id"
+    t.index ["item_type", "item_id"], name: "index_trade_items_on_item"
+    t.index ["trade_id"], name: "index_trade_items_on_trade_id"
+  end
+
+  create_table "trades", force: :cascade do |t|
+    t.integer "owner_money"
+    t.integer "customer_money"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "owner_id"
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_trades_on_customer_id"
+    t.index ["owner_id"], name: "index_trades_on_owner_id"
+  end
+
   create_table "utilities", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -137,5 +160,6 @@ ActiveRecord::Schema.define(version: 2021_02_15_012346) do
   add_foreign_key "cards", "actions"
   add_foreign_key "properties", "players"
   add_foreign_key "properties", "property_sets"
+  add_foreign_key "trade_items", "trades"
   add_foreign_key "utilities", "actions"
 end

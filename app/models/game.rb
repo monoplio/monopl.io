@@ -3,4 +3,5 @@ class Game < ApplicationRecord
   has_many :players, dependent: :delete_all
   belongs_to :owner, class_name: 'Player', optional: true
   belongs_to :current_player, class_name: 'Player', optional: true
+  belongs_to :current_trade, class_name: 'Trade', optional: true
 end
