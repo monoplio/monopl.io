@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_213456) do
+ActiveRecord::Schema.define(version: 2021_02_27_150112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,23 @@ ActiveRecord::Schema.define(version: 2021_02_20_213456) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "action_type"
     t.integer "data_field"
+  end
+
+  create_table "auctions", force: :cascade do |t|
+    t.bigint "property_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "bid_id"
+    t.index ["bid_id"], name: "index_auctions_on_bid_id"
+    t.index ["property_id"], name: "index_auctions_on_property_id"
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.bigint "player_id"
+    t.integer "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["player_id"], name: "index_bids_on_player_id"
   end
 
   create_table "cards", force: :cascade do |t|
@@ -56,6 +73,8 @@ ActiveRecord::Schema.define(version: 2021_02_20_213456) do
     t.string "state"
     t.bigint "current_player_id"
     t.bigint "current_trade_id"
+    t.bigint "auction_id"
+    t.index ["auction_id"], name: "index_games_on_auction_id"
     t.index ["current_player_id"], name: "index_games_on_current_player_id"
     t.index ["current_trade_id"], name: "index_games_on_current_trade_id"
     t.index ["owner_id"], name: "index_games_on_owner_id"
