@@ -10,6 +10,7 @@ module Types
     field :state, String, null: false
     field :tiles, [Types::TileType], null: false
     field :players, [Types::PlayerType], null: false
+    field :auctions, [Types::AuctionType], null: true
     field :owner, Types::PlayerType, null: false
     field :current_player, Types::PlayerType, null: true
     field :current_trade, Types::TradeType, null: true

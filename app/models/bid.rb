@@ -1,4 +1,4 @@
 class Bid < ApplicationRecord
-  has_one :auction, dependent: :destroy
   belongs_to :player, class_name: 'Player', optional: false
+  belongs_to :auction, class_name: 'Auction', optional: false
 end
