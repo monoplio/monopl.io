@@ -3,11 +3,12 @@ module Mutations
     # Mutation that creates an auction
     class CreateAuction < BaseMutation
       argument :property_id, ID, required: true
+      argument :game_id, ID, required: true
 
       type Types::AuctionType
-      def resolve(property_id:)
+      def resolve(property_id:, game_id:)
         property = Property.find(property_id)
-        game = Player.find(property.player_id).game
+        game = Game.find(game_id)
         players = game.players
 
         auction = ::Auction.create!(
