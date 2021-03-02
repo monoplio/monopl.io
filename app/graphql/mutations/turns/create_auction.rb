@@ -7,7 +7,7 @@ module Mutations
       type Types::AuctionType
       def resolve(property_id:)
         property = Property.find(property_id)
-        game = Game.find(Player.find(property.player_id).game_id)
+        game = Player.find(property.player_id).game
         players = game.players
 
         auction = ::Auction.create!(
