@@ -47,7 +47,7 @@ module Mutations
 
           if player.tile.board_tile.instance_of? ::Property
             owner = player.tile.board_tile.player
-            if !owner.nil? && (owner.id != player.id)
+            if !owner.nil? && (owner.id != player.id) && player.tile.board_tile.state != 'mortgaged'
               ActiveRecord::Base.transaction do
                 player.update!(balance: player.balance - player.tile.board_tile.landing_cost)
                 owner.update!(balance: owner.balance + player.tile.board_tile.landing_cost)
