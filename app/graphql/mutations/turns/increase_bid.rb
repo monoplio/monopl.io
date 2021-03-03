@@ -2,7 +2,7 @@ module Mutations
   module Turns
     # Mutation that creates an Auction
     class IncreaseBid < BaseMutation
-      argument :player_id, ID, require: true
+      argument :player_id, ID, required: true
       argument :bid_amount, Integer, required: true
 
       type Types::AuctionType
