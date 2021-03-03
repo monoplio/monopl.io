@@ -9,7 +9,10 @@ module Types
     # Turn Mutations
     field :buy_house, mutation: Mutations::Turns::BuyHouse, description: 'Purchases house on property'
     field :buy_property, mutation: Mutations::Turns::BuyProperty, description: 'Purchases property'
+    field :create_auction, mutation: Mutations::Turns::CreateAuction, description: 'Creates an auction for the given property'
+    field :end_bid, mutation: Mutations::Turns::EndBid, description: 'Player opts out of an auction'
     field :ff, mutation: Mutations::Turns::Ff, description: 'Player forfeits game'
+    field :increase_bid, mutation: Mutations::Turns::IncreaseBid, description: 'Increase the bid amount for the given player'
     field :mortgage_property, mutation: Mutations::Turns::MortgageProperty, description: 'Mortgages a property'
     field :roll_dice, mutation: Mutations::Turns::RollDice, description: 'Rolls the dice'
     field :sell_house, mutation: Mutations::Turns::SellHouse, description: 'Sells house on property'
