@@ -24,7 +24,7 @@ module Mutations
         end
 
         game.update!(state: 'auction')
-        GraphqlEvent.new(message: 'CreateAuction', data: player.game)
+        GraphqlEvent.new(message: 'CreateAuction', data: game)
         auction
       rescue ActiveRecord::RecordNotFound
         GraphQL::ExecutionError.new('ERROR: Player or property does not exist')

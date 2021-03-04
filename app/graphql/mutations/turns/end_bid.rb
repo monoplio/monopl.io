@@ -3,16 +3,21 @@ module Mutations
     # Mutation that creates an auction
     class EndBid < BaseMutation
       argument :player_id, ID, required: true
+      argument :auction_id, ID, required: true
 
       type Types::GameType
-      def resolve(player_id:)
+      def resolve(player_id:, auction_id:)
         player = Player.find(player_id)
         game = player.game
-        bid = Bid.where(player_id: player_id)
-        auction = bid.auction
+        bid = Bid.where(player_id: player_id).first
+        auction = Auction.find(auction_id)
         remaining_bids = auction.bids.where.not(amount: -1)
+        highest_bid = remaining_bids.max_by(&:amount)
 
+        GraphQL::ExecutionError.new('ERROR: Unable to end bid') if player_id == highest_bid.player_id
         bid.update!(amount: -1)
+
+        remaining_bids = auction.bids.where.not(amount: -1)
 
         # Check for winner
         if remaining_bids.size == 1
