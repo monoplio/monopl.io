@@ -3,10 +3,11 @@ module Mutations
     # Mutation that creates an Auction
     class IncreaseBid < BaseMutation
       argument :player_id, ID, required: true
-      argument :bid_amount, Integer, required: true
+      argument :auction_id, ID, required: true
+      argument :bid_amount, Int, required: true
 
       type Types::AuctionType
-      def resolve(player_id:, bid_amount:)
+      def resolve(player_id:, auction_id:, bid_amount:)
         player = Player.find(player_id)
         auction = Auction.find(auction_id)
         game = Game.find(player.game_id)
@@ -17,8 +18,10 @@ module Mutations
         # Update bid amount to -1 for players who don't have enough money anymore
         if bid.amount >= bid_amount
           GraphQL::ExecutionError.new('ERROR: New bid amount is the same or less than current bid amount')
+        elsif bid.amount > player.balance
+          GraphQL::ExecutionError.new('ERROR: New bid amount cannot be more than the player\'s balance')
         else
-          Bid.update!(amount: bid_amount)
+          bid.update!(amount: bid_amount)
 
           players.each do |p|
             Bid.where(player_id: p.id).first.update!(amount: -1) if p.balance < bid_amount
