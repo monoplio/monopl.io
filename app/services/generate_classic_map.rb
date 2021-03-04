@@ -186,7 +186,7 @@ class GenerateClassicMap
     )
 
     light_blue = PropertySet.create!(
-      color: 'light Blue',
+      color: '#00ceff',
       bonus: 2
     )
 

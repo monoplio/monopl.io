@@ -9,4 +9,6 @@ AllCops:
         - 'db/schema.rb'
         - 'app/controllers/graphql_controller.rb'
         - 'app/services/generate_classic_map.rb'
+        - 'app/graphql/loaders/association_loader.rb'
+        - 'bin/bundle'
     NewCops: enable
