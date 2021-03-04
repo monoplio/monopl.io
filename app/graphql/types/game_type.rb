@@ -14,5 +14,17 @@ module Types
     field :owner, Types::PlayerType, null: false
     field :current_player, Types::PlayerType, null: true
     field :current_trade, Types::TradeType, null: true
+
+    def tiles
+      Loaders::AssociationLoader.for(Game, :tiles).load(object)
+    end
+
+    def players
+      Loaders::AssociationLoader.for(Game, :players).load(object)
+    end
+
+    def auctions
+      Loaders::AssociationLoader.for(Game, :auctions).load(object)
+    end
   end
 end
