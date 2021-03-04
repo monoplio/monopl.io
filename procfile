@@ -1,4 +1,0 @@
-rake: bundle exec rake
-console: bundle exec irb
-web: bundle exec puma -C config/puma.rb
-release: bash ./release.sh
