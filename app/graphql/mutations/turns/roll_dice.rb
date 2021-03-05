@@ -35,7 +35,7 @@ module Mutations
             if player.roll_count <= 2
               player.update!(roll_count: player.roll_count + 1, can_roll: false)
             else
-              player.update!(in_jail: false, can_roll: false)
+              player.update!(in_jail: false, can_roll: false, balance: player.balance - 50)
             end
           else
             player.update!(roll_count: 0, can_roll: false)
