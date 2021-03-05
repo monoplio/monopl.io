@@ -4,7 +4,7 @@ DN
 
 ## Schema
 
-![ERD](https://i.imgur.com/Knwpx7u.png)
+![ERD](https://i.imgur.com/4maRBBx.png)
 
 ## Commands
 
