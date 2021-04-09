@@ -1,6 +1,6 @@
 # 🎩 Monopl.io - Server
 
-Readme to be updated.
+Readme to be updated. Development in progress. 
 
 ## Schema
 
